@@ -40,6 +40,7 @@ alias ..5="cd ../../.."
 alias g=git
 alias gs="git status"
 alias ga="git add ."
+alias gc="git commit"
 alias gp="git pull"
 alias gpsh="git push"
 
@@ -64,12 +65,8 @@ autoload -Uz compinit && compinit
 ################## FUNCTIONS ##################
 
 # CHANGE DIR
-function cd {
+function cd() {
   builtin cd "$@" && ls
-}
-
-function gc {
-  git commit -m "$@"
 }
 
 ################## OPTIONS ##################
