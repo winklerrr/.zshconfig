@@ -1,0 +1,5 @@
+# Exclude the global ignore for this file
+!.gitignore
+ 
+# Include everything in this directory
+!*
