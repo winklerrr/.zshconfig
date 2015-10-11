@@ -4,10 +4,10 @@
 pushd $PWD > /dev/null
 
 # PULL MY ZSHCONFIG
-echo '### Update ZSHCONFIG ###' && git pull
+echo '### Update ZSHCONFIG ###' && git pull -q
 
 # PULL SUBMODULES
-echo '### Update all submodules ###' && git submodule update --init --recursive
+echo '### Update all submodules ###' && git submodule update --init --recursive --quiet
 
 popd > /dev/null
 
