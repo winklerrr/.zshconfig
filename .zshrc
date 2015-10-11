@@ -8,7 +8,6 @@ autoload -Uz promptinit && promptinit && setopt prompt_subst
 
 # AUTO COMPLETIONS
 autoload -Uz compinit && compinit
-autoload -Uz predict-on && predict-on
 
 ################## FUNCTIONS ##################
 
@@ -59,6 +58,11 @@ alias .....="cd ../../../.."
 
 # GIT
 alias g=git
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git pull"
+alias gps="git push"
 
 # ZSH
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
