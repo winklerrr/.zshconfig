@@ -5,11 +5,8 @@ pushd $PWD > /dev/null
 # PULL MY ZSHCONFIG
 echo '### Update ZSHCONFIG ###' && git pull 
 
-# PULL SYNTAX HIGHLIGHTER
-cd $PWD/.zsh/zsh-syntax-highlighting && echo '### Update SYNTAX HIGHLIGHTER ###' && git pull && cd ../..
-
-# PULL HISTORY SUBSTRING
-cd $PWD/.zsh/zsh-history-substring-search && echo '### Update HISTORY SUBSTRING SEARCH ###' && git pull && cd ../..
+# PULL SUBMODULES
+echo '### Update all submodules ###' && git submodule update --init --recursive
 
 popd > /dev/null
 ################## AUTOLOAD ##################
