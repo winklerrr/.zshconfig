@@ -11,6 +11,7 @@ autoload -Uz compinit && compinit
 
 ################## FUNCTIONS ##################
 
+# CHANGE DIR
 function cd {
   builtin cd "$@" && ls
 }
@@ -59,7 +60,7 @@ alias .....="cd ../../../.."
 # GIT
 alias g=git
 alias gs="git status"
-alias ga="git add"
+alias ga="git add ."
 alias gc="git commit"
 alias gp="git pull"
 alias gps="git push"
@@ -78,3 +79,5 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # HISTORY SUBSTRING SEARCH
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+git pull
