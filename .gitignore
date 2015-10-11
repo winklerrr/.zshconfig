@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Not these files
+!.gitignore
+!.zshrc
+!.vimrc
+!LICENSE
+
+# Not these directories
+!.zsh/

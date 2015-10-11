@@ -1,3 +1,17 @@
+################## UPDATER ##################
+### TODO: implement better updater
+pushd $PWD > /dev/null
+
+# PULL MY ZSHCONFIG
+echo '### Update ZSHCONFIG ###' && git pull 
+
+# PULL SYNTAX HIGHLIGHTER
+cd $PWD/.zsh/zsh-syntax-highlighting && echo '### Update SYNTAX HIGHLIGHTER ###' && git pull && cd ../..
+
+# PULL HISTORY SUBSTRING
+cd $PWD/.zsh/zsh-history-substring-search && echo '### Update HISTORY SUBSTRING SEARCH ###' && git pull && cd ../..
+
+popd > /dev/null
 ################## AUTOLOAD ##################
 
 # COLORS
@@ -66,7 +80,7 @@ alias gp="git pull"
 alias gps="git push"
 
 # ZSH
-alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.zshrc'"
 alias zshrc="vim ~/.zshrc && reload"
 
 # SERVER
@@ -79,5 +93,3 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # HISTORY SUBSTRING SEARCH
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-git pull
