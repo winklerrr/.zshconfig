@@ -74,6 +74,9 @@ function cd() {
 # ENABLE VIM
 bindkey -v  
 
+# NO BEEP
+setopt No_Beep
+
 # REDUCE TIME TO SWITCH BETWEEN VIMS INSERT AND NORMAL MODE
 export KEYTIMEOUT=1 
 
