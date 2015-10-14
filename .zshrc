@@ -1,4 +1,4 @@
-################## UPDATER ##################
+################# UPDATER ##################
 ### TODO: IMPLEMENT BETTER UPDATER
 
 pushd > /dev/null
@@ -19,7 +19,7 @@ unalias -m "*"
 
 # GENERAL
 alias c=clear
-alias ls="ls -aGp --color=auto"
+alias ls="ls -aGp"
 alias md=mkdir
 
 # SUDO LAST COMMAND
@@ -83,6 +83,11 @@ function gc() {
   else 
     git commit -m "$*"
   fi
+}
+
+# TITLE BAR
+function precmd () { 
+  print -Pn "\e]2;%n ::  %~\a" 
 }
 
 ################## OPTIONS ##################
