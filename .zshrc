@@ -74,8 +74,20 @@ function cd() {
   builtin cd "$@" && ls
 }
 
-# GIT COMMIT WITHOUT OR WITH MESSAGE,
-# DEPENDING ON INPUT
+# GIT 
+# CURRENT BRANCH
+function current_branch() {
+  local ref
+  ref=$($_omz_git_git_cmd symbolic-ref --quiet HEAD 2> /dev/null)
+  local ret=$?
+  if [[ $ret != 0 ]]; then
+    [[ $ret == 128 ]] && return  # no git repo.
+    ref=$($_omz_git_git_cmd rev-parse --short HEAD 2> /dev/null) || return
+  fi
+  echo ${ref#refs/heads/}
+}
+
+# COMMIT WITHOUT OR WITH MESSAGE DEPENDING ON INPUT
 function gc() {
   if [ -z "$1" ]; then
     git commit 
@@ -114,16 +126,6 @@ git config --global push.default simple
 git config --global user.name "Sandro Winkler"
 git config --global user.email "sandro@sandrowinkler.com"
 
-################## PROMPT ##################
-
-# LEFT PROMPT
-PROMPT='
-%{$fg[red]%}%n%{$reset_color%} :: %{$fg[magenta]%}%~%{$reset_color%}
---> '
-
-# RIGHT PROMPT
-RPROMPT='[%{$fg_no_bold[yellow]%}%?%{$reset_color%}] | %D | %T'
-
 ################## PLUGINS ##################
 
 # SYNTAX HIGHLIGHTING
@@ -141,3 +143,13 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # NOW LOAD HISTORY SUBSTRING
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+################## PROMPT ##################
+
+# LEFT PROMPT
+PROMPT='
+%{$fg[red]%}%n%{$reset_color%} :: %{$fg[magenta]%}%~%{$reset_color%}
+--> '
+
+# RIGHT PROMPT
+RPROMPT='[%{$fg_no_bold[yellow]%}%?%{$reset_color%}] | %D | %T'
