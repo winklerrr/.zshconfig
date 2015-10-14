@@ -1,5 +1,5 @@
 ################## UPDATER ##################
-### TODO: implement better updater
+### TODO: IMPLEMENT BETTER UPDATER
 
 pushd $PWD > /dev/null
 
@@ -12,18 +12,22 @@ echo '### Update all submodules ###' && git submodule update --init --recursive 
 popd > /dev/null
 
 ################## ALIASES ##################
-### For a full list of active aliases, run `alias` ###
+### FOR A FULL LIST OF ACTIVE ALIASES, RUN `alias` ###
+
+# UNALIAS ALL BEFORE ALIASING AGAIN
+unalias -a
 
 # GENERAL
 alias c=clear
 alias ls="ls -aG"
 alias md=mkdir
 
-# sudo last command
+# SUDO LAST COMMAND
 alias doch='sudo $(fc -ln -1)'
 
 # CHANGE DIR
 alias ~="cd ~"
+alias /="cd /"
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -38,9 +42,9 @@ alias ..5="cd ../../.."
 
 # GIT
 alias g=git
-alias gs="git status"
-alias ga="git add ."
-alias gc="git commit"
+alias gs="git status --short"
+alias ga="git add"
+alias gaa="git add ."
 alias gp="git pull"
 alias gpsh="git push"
 
@@ -49,7 +53,6 @@ alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.z
 alias zshrc="vim ~/.zshrc && reload"
 
 # SERVER
-#alias server="ssh -i .ssh/id_rsa_1und1_server root@s18641328.onlinehome-server.info"
 alias server="ssh -i .ssh/id_rsa_1und1_server root@sandrowinkler.com"
 
 ################## AUTOLOAD ##################
@@ -70,6 +73,16 @@ function cd() {
   builtin cd "$@" && ls
 }
 
+# GIT COMMIT WITHOUT OR WITH MESSAGE,
+# DEPENDING ON INPUT
+function gc() {
+  if [ -z "$1" ]; then
+    git commit 
+  else 
+    git commit -m "$*"
+  fi
+}
+
 ################## OPTIONS ##################
 
 # ENABLE VIM
@@ -80,8 +93,6 @@ setopt No_Beep
 
 # REDUCE TIME TO SWITCH BETWEEN VIMS INSERT AND NORMAL MODE
 export KEYTIMEOUT=1 
-
-# HISTORY SUBSTRING
 
 ################## PROMPT ##################
 
@@ -99,13 +110,14 @@ RPROMPT='[%{$fg_no_bold[yellow]%}%?%{$reset_color%}] | %D | %T'
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # HISTORY SUBSTRING SEARCH
-# bind up and down arrow keys
+# BIND UP AND DOWN ARROW KEYS
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-# bind k and j for vi mode
+# BIND K AND J FOR VI MODE
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
+# NOW LOAD HISTORY SUBSTRING
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
