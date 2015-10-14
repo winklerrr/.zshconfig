@@ -86,7 +86,7 @@ export KEYTIMEOUT=1
 
 # LEFT PROMPT
 PROMPT='
-%{$fg[red]%}%n%{$reset_color%} :: %{$fg[magenta]%}%1~%{$reset_color%}
+%{$fg[red]%}%n%{$reset_color%} :: %{$fg[magenta]%}%~%{$reset_color%}
 --> '
 
 # RIGHT PROMPT
