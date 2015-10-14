@@ -96,6 +96,11 @@ setopt No_Beep
 # REDUCE TIME TO SWITCH BETWEEN VIMS INSERT AND NORMAL MODE
 export KEYTIMEOUT=1 
 
+# GIT OPTIONS
+git config --global push.default simple
+git config --global user.name "Sandro Winkler"
+git config --global user.email "sandro@sandrowinkler.com"
+
 ################## PROMPT ##################
 
 # LEFT PROMPT
