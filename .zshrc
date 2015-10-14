@@ -49,7 +49,8 @@ alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.z
 alias zshrc="vim ~/.zshrc && reload"
 
 # SERVER
-alias server="ssh -i .ssh/id_rsa_1und1_server root@s18641328.onlinehome-server.info"
+#alias server="ssh -i .ssh/id_rsa_1und1_server root@s18641328.onlinehome-server.info"
+alias server="ssh -i .ssh/id_rsa_1und1_server root@sandrowinkler.com"
 
 ################## AUTOLOAD ##################
 
