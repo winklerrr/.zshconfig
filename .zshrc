@@ -20,7 +20,6 @@ unalias -m "*"
 # GENERAL
 alias c=clear
 alias ls="ls -aGp"
-alias md=mkdir
 
 # SUDO LAST COMMAND
 alias doch='sudo $(fc -ln -1)'
@@ -86,8 +85,17 @@ function gc() {
 }
 
 # TITLE BAR
-function precmd () { 
+function precmd() { 
   print -Pn "\e]2;%n ::  %~\a" 
+}
+
+# MKDIR
+function mkdir() {
+  /bin/mkdir "$@" && cd "$@"
+}
+
+function md() {
+  mkdir $@
 }
 
 ################## OPTIONS ##################
