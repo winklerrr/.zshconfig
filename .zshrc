@@ -1,7 +1,7 @@
 ################## UPDATER ##################
 ### TODO: IMPLEMENT BETTER UPDATER
 
-pushd $PWD > /dev/null
+pushd > /dev/null
 
 # PULL MY ZSHCONFIG
 echo '### Update ZSHCONFIG ###' && git pull -q
@@ -19,7 +19,7 @@ unalias -m "*"
 
 # GENERAL
 alias c=clear
-alias ls="ls -aG"
+alias ls="ls -aGp --color=auto"
 alias md=mkdir
 
 # SUDO LAST COMMAND
