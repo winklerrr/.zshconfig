@@ -15,7 +15,7 @@ popd > /dev/null
 ### FOR A FULL LIST OF ACTIVE ALIASES, RUN `alias` ###
 
 # UNALIAS ALL BEFORE ALIASING AGAIN
-unalias -a
+unalias -m "*"
 
 # GENERAL
 alias c=clear
