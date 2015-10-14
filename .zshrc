@@ -128,6 +128,9 @@ git config --global user.email "sandro@sandrowinkler.com"
 
 ################## PLUGINS ##################
 
+# GIT PROMPT
+source ~/.zsh/zsh-git-prompt/zshrc.sh
+
 # SYNTAX HIGHLIGHTING
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -148,7 +151,7 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # LEFT PROMPT
 PROMPT='
-%{$fg[red]%}%n%{$reset_color%} :: %{$fg[magenta]%}%~%{$reset_color%}
+%{$fg[red]%}%n%{$reset_color%} :: %{$fg[magenta]%}%~%{$reset_color%} $(git_super_status)
 --> '
 
 # RIGHT PROMPT
