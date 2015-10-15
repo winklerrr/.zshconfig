@@ -151,7 +151,7 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # LEFT PROMPT
 PROMPT='
-%{$fg[red]%}%n%{$reset_color%} :: %{$fg[magenta]%}%~%{$reset_color%} $(git_super_status)
+%{$fg_bold[red]%}%n%{$reset_color%} :: %{$fg_bold[blue]%}%~%{$reset_color%} $(git_super_status)
 --> '
 
 # RIGHT PROMPT
