@@ -17,7 +17,7 @@ Now clone this repository to your disk. (You can clone it to whatever path you l
 To clone it to the current path, use:
 
 ```{bash}
-git clone https://github.com/winklerrr/zshconfig.git
+git clone https://github.com/winklerrr/.zshconfig.git
 ```
 
 Now source this config from your own zsh config file.
