@@ -1,0 +1,9 @@
+[submodule "PLUGINS/zsh-syntax-highlighting"]
+	path = PLUGINS/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "PLUGINS/zsh-history-substring-search"]
+	path = PLUGINS/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "PLUGINS/zsh-git-prompt"]
+	path = PLUGINS/zsh-git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt.git
