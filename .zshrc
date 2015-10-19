@@ -1,7 +1,12 @@
-################# UPDATER ##################
-### TODO: IMPLEMENT BETTER UPDATER
+# PATH TO THIS DIRECTORY
+SCRIPTPATH="${0%/*}"
 
-pushd > /dev/null
+# PATH TO THIS FILE
+SCRIPT="${0}"
+
+################# UPDATER ##################
+
+pushd $SCRIPTPATH > /dev/null
 
 # PULL MY ZSHCONFIG
 echo '### Update ZSHCONFIG ###' && git pull -q
@@ -51,7 +56,7 @@ alias gdc="git diff --cached"
 
 # ZSH
 alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.zshrc'"
-alias zshrc="vim ~/.zshrc && reload"
+alias zshrc="vim ${SCRIPT} && reload" 
 
 # SERVER
 alias server="ssh -i .ssh/id_rsa_1und1_server root@sandrowinkler.com"
@@ -129,10 +134,10 @@ git config --global user.email "sandro@sandrowinkler.com"
 ################## PLUGINS ##################
 
 # GIT PROMPT
-source ~/.zsh/zsh-git-prompt/zshrc.sh
+source ${SCRIPTPATH}/.zsh/zsh-git-prompt/zshrc.sh
 
 # SYNTAX HIGHLIGHTING
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${SCRIPTPATH}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # HISTORY SUBSTRING SEARCH
 # BIND UP AND DOWN ARROW KEYS
@@ -145,7 +150,7 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # NOW LOAD HISTORY SUBSTRING
-source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ${SCRIPTPATH}/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 ################## PROMPT ##################
 
