@@ -134,10 +134,10 @@ git config --global user.email "sandro@sandrowinkler.com"
 ################## PLUGINS ##################
 
 # GIT PROMPT
-source ${SCRIPTPATH}/.zsh/zsh-git-prompt/zshrc.sh
+source ${SCRIPTPATH}/PLUGINS/zsh-git-prompt/zshrc.sh
 
 # SYNTAX HIGHLIGHTING
-source ${SCRIPTPATH}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${SCRIPTPATH}/PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # HISTORY SUBSTRING SEARCH
 # BIND UP AND DOWN ARROW KEYS
@@ -150,7 +150,7 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # NOW LOAD HISTORY SUBSTRING
-source ${SCRIPTPATH}/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ${SCRIPTPATH}/PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 ################## PROMPT ##################
 
