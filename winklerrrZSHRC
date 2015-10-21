@@ -84,18 +84,6 @@ function cd() {
 }
 
 # GIT 
-# CURRENT BRANCH
-function current_branch() {
-  local ref
-  ref=$($_omz_git_git_cmd symbolic-ref --quiet HEAD 2> /dev/null)
-  local ret=$?
-  if [[ $ret != 0 ]]; then
-    [[ $ret == 128 ]] && return  # no git repo.
-    ref=$($_omz_git_git_cmd rev-parse --short HEAD 2> /dev/null) || return
-  fi
-  echo ${ref#refs/heads/}
-}
-
 # COMMIT WITHOUT OR WITH MESSAGE DEPENDING ON INPUT
 function gc() {
   if [ -z "$1" ]; then
@@ -103,6 +91,11 @@ function gc() {
   else 
     git commit -m "$*"
   fi
+}
+
+# ADD AND COMMIT IN ONE COMMAND
+function gac() {
+  git add . && gc $*
 }
 
 # TITLE BAR
