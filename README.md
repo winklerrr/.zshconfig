@@ -50,6 +50,8 @@ git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR E-MAIL" 
 ```
 
+**TIP:** You can check your git config settings for name and email with my simple alias `ginfo`!
+
 # Functionality
 What functionalities are provided by my zsh config?
 
