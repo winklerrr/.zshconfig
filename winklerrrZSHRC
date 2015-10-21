@@ -67,6 +67,9 @@ alias ginfo="gname && gmail"
 alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.zshrc'"
 alias zshrc="vim ${SCRIPT} && reload" 
 
+# VIM
+alias vimrc="vim '${SCRIPTPATH}/winklerrrVIMRC'"
+
 # SERVER
 alias server="ssh -i .ssh/id_rsa_1und1_server root@sandrowinkler.com"
 
