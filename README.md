@@ -51,6 +51,7 @@ git config --global user.email "YOUR E-MAIL"
 ```
 
 **TIP:** You can check your git config settings for name and email with my simple alias `ginfo`!
+If you use the command while you are inside of a local repository, the local settings will be shown. Otherwise the global config settings will be displayed.
 
 # Functionality
 What functionalities are provided by my zsh config?
