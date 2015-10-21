@@ -26,6 +26,7 @@ unalias -m "*"
 
 # GENERAL
 alias c=clear
+alias o="open ."
 alias ls="ls -aGp"
 
 # SUDO LAST COMMAND
