@@ -22,36 +22,39 @@ To clone it to the current path, use:
 git clone https://github.com/winklerrr/.zshconfig.git
 ```
 
-## Load and adapt config
+## Load and adapt ZSH config
 To use my config you have to source it from your own custom zsh config file. You should also adapt some settings to your personal needs. 
 
-Your own zsh config file is located at ```~/.zshrc```. If the file doesn't exist just create it.
+Your own zsh config file is located at `~/.zshrc`. If the file doesn't exist create it.
 
-You can use the following command to change to your home directory and edit/create the zsh config file.
-
-```{bash}
-cd ~
-vim .zshrc
-```
+Use the command `cd ~ && vim .zshrc` to change to your home directory and edit/create the zsh config file. (If you don't know how to use vim, use `nano` instead.)
 
 Now inlcude the following lines to your zsh config file to load it and adapt it to your personal needs.
 
 ```{bash}
+# If you cloned this repository to another path, don't forget to adapt it appropriately.
 source ~/.zshconfig/winklerrrZSHRC
+
 git config --global user.name "YOUR NAME" 
 git config --global user.email "YOUR E-MAIL" 
 ```
 
-If you cloned this repository to another path, adapt and use the following lines instead.
+**TIP:** You can check your git config settings for name and email with my simple alias `ginfo`!  
+If you use the command while you are inside of a local repository, the local settings will be shown. Otherwise the global config settings will be displayed.
+
+## Load VIM config
+To use my config for vim you have to source it from your own custom vim config file. 
+
+Your own vim config file should be located in the same path as your zsh config file (`~/.vimrc`). If the file doesn't exist create it.
+
+Use the command `cd ~ && vim .vimrc` to change to your home directory and edit/create the zsh config file.
+
+Source my vim config file now from yours with the following command.
 
 ```{bash}
-source path/to/.zshconfig/winklerrrZSHRC
-git config --global user.name "YOUR NAME" 
-git config --global user.email "YOUR E-MAIL" 
+# If you cloned this repository to another path, don't forget to adapt it appropriately.
+source ./.zshconfig/winklerrrVIMRC
 ```
-
-**TIP:** You can check your git config settings for name and email with my simple alias `ginfo`!
-If you use the command while you are inside of a local repository, the local settings will be shown. Otherwise the global config settings will be displayed.
 
 # Functionality
 What functionalities are provided by my zsh config?
