@@ -124,10 +124,20 @@ function md() {
 bindkey -v  
 
 # NO BEEP
-setopt No_Beep
+setopt no_beep
+unsetopt list_beep
 
 # REDUCE TIME TO SWITCH BETWEEN VIMS INSERT AND NORMAL MODE
 export KEYTIMEOUT=1 
+
+# CASE INSENSITIVE COMPLETION
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# CHANGE DIR
+setopt autocd
+setopt cdablevars
+setopt auto_pushd
+setopt auto_menu
 
 # GIT OPTIONS
 git config --global push.default simple
