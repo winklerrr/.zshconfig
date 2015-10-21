@@ -69,6 +69,7 @@ alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.z
 alias zshrc="vim ${SCRIPT} && reload" 
 
 # VIM
+alias v=vim
 alias vimrc="vim '${SCRIPTPATH}/winklerrrVIMRC'"
 
 # SERVER

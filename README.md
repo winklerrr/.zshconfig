@@ -1,6 +1,8 @@
 # .zshconfig
 My personal zsh config. Feel free to clone or fork this repo. Play around with it as much as you want! If you like you can even send me a pull request for the changes you've made :)
 
+**INFO:** Tested under MAC OS X 10.11.1
+
 # Install
 Change Terminal to use ZSH. You can archive that on two different ways:
 
