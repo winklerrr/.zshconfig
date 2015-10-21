@@ -1,3 +1,5 @@
+################# PATH VARIABLES ##################
+
 # PATH TO THIS DIRECTORY
 SCRIPTPATH="${0%/*}"
 
@@ -30,6 +32,7 @@ alias ls="ls -aGp"
 alias doch='sudo $(fc -ln -1)'
 
 # CHANGE DIR
+alias -- -="cd -"
 alias ~="cd ~"
 alias /="cd /"
 
