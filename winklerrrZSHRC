@@ -57,6 +57,7 @@ alias gp="git pull"
 alias gpsh="git push"
 alias gd="git diff"
 alias gdc="git diff --cached"
+alias gl="git log"
 
 # ZSH
 alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.zshrc'"
