@@ -1,5 +1,5 @@
 # .zshconfig
-My personal zsh config. Feel free to clone or fork this repo. Play around with it as much as you want! If you like you can even send me a pull request for the changes you made :)
+My personal zsh config. Feel free to clone or fork this repo. Play around with it as much as you want! If you like you can even send me a pull request for the changes you've made :)
 
 # Install
 Change Terminal to use ZSH. You can archive that on two different ways:
@@ -42,7 +42,7 @@ git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR E-MAIL" 
 ```
 
-If you cloned this repository to another path, adapt and use the following line instead.
+If you cloned this repository to another path, adapt and use the following lines instead.
 
 ```{bash}
 source path/to/.zshconfig/winklerrrZSHRC
