@@ -59,6 +59,10 @@ alias gd="git diff"
 alias gdc="git diff --cached"
 alias gl="git log"
 
+alias gname="git config user.name"
+alias gmail="git config user.email"
+alias ginfo="gname && gmail"
+
 # ZSH
 alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.zshrc'"
 alias zshrc="vim ${SCRIPT} && reload" 
