@@ -146,7 +146,7 @@ setopt auto_menu
 # GIT OPTIONS
 git config --global push.default simple
 git config --global user.name "Sandro Winkler"
-git config --global user.email "github@sandrowinkler.com"
+git config --global user.email "code@sandrowinkler.com"
 
 ################## PLUGINS ##################
 
