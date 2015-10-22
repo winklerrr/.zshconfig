@@ -114,7 +114,7 @@ function gc() {
 
 # ADD AND COMMIT IN ONE COMMAND
 function gac() {
-  git add . && gc $*
+  git add . && gc "$*"
 }
 
 # TITLE BAR
