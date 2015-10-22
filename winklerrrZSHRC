@@ -93,6 +93,15 @@ function cd() {
   builtin cd "$@" && ls
 }
 
+# MKDIR
+function mkdir() {
+  /bin/mkdir "$@" && cd "$@"
+}
+
+function md() {
+  mkdir "$*"
+}
+
 # GIT 
 # COMMIT WITHOUT OR WITH MESSAGE DEPENDING ON INPUT
 function gc() {
@@ -105,21 +114,12 @@ function gc() {
 
 # ADD AND COMMIT IN ONE COMMAND
 function gac() {
-  git add . && gc $*
+  git add . && gc $@
 }
 
 # TITLE BAR
 function precmd() { 
   print -Pn "\e]2;%n ::  %~\a" 
-}
-
-# MKDIR
-function mkdir() {
-  /bin/mkdir "$@" && cd "$@"
-}
-
-function md() {
-  mkdir $@
 }
 
 ################## OPTIONS ##################
