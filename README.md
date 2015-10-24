@@ -4,25 +4,28 @@ My personal zsh config. Feel free to clone or fork this repo. Play around with i
 **INFO:** Tested under MAC OS X 10.11.1
 
 # Install
+## Use ZSH
 Change Terminal to use ZSH. You can archive that on two different ways:
 
-## Use ZSH
 1. In the preferences
     + Open preferences (`CMD + ,`)
     + Go to general -> Shells open with
     + Choose "Command" 
     + Set the path to `/bin/zsh`
-2. Via commandline
+2. Or via commandline
     + Execute `sudo chsh -s /bin/zsh`
 
 ## Clone repository
 Now clone this repository to your disk. (You can clone it to whatever path you like, but you should remember the path for the next step.)
 
-To clone it to the current path, use:
+I recommend to clone it to your home path. To do so, use the following commands:
 
 ```{bash}
+cd ~
 git clone https://github.com/winklerrr/.zshconfig.git
 ```
+
+The clonend repository will then be in the hidden folder `~/.zshconfig`. (If you want to see that folder use: `ls -a`.)
 
 ## Load and adapt ZSH config
 To use my config you have to source it from your own custom zsh config file. You should also adapt some settings to your personal needs. 

@@ -51,11 +51,16 @@ alias ..5="cd ../../.."
 # GIT
 alias g=git
 alias gs="git status --short"
+alias gb="git branch"
+
 alias ga="git add"
 alias ga.="git add ."
 alias gaa="git add -A"
+
 alias gp="git pull"
+alias gpr="git pull --rebase"
 alias gpsh="git push"
+
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gl="git log"
