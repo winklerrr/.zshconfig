@@ -26,8 +26,7 @@ unalias -m "*"
 
 # GENERAL
 alias c=clear
-alias o="open ."
-alias ls="ls -aGp"
+alias ls="ls -alGp"
 
 # SUDO LAST COMMAND
 alias doch='sudo $(fc -ln -1)'
@@ -52,10 +51,12 @@ alias ..5="cd ../../.."
 alias g=git
 alias gs="git status --short"
 alias gb="git branch"
+alias gco="git checkout"
 
 alias ga="git add"
 alias ga.="git add ."
 alias gaa="git add -A"
+alias gca="git commit --amend"
 
 alias gp="git pull"
 alias gpr="git pull --rebase"
@@ -72,6 +73,7 @@ alias ginfo="gname && gmail"
 # ZSH
 alias reload="source ~/.zshrc > /dev/null && echo 'ZSH config reloaded from ~/.zshrc'"
 alias zshrc="vim ${SCRIPT} && reload" 
+alias zshconfig="cd '${SCRIPTPATH}'"
 
 # VIM
 alias v=vim
@@ -105,6 +107,15 @@ function mkdir() {
 
 function md() {
   mkdir "$*"
+}
+
+# OPEN
+function o() {
+  if [ -z "$1" ]; then
+    open .
+  else
+    open "$*"
+  fi
 }
 
 # GIT 
