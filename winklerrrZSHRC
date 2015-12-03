@@ -81,7 +81,7 @@ alias v=vim
 alias vimrc="vim '${SCRIPTPATH}/winklerrrVIMRC'"
 
 # SERVER
-alias server="ssh -i .ssh/id_rsa_1und1_server root@sandrowinkler.com"
+alias server="ssh wordpress@sandrowinkler.com"
 
 ################## AUTOLOAD ##################
 
