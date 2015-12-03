@@ -80,9 +80,6 @@ alias zshconfig="cd '${SCRIPTPATH}'"
 alias v=vim
 alias vimrc="vim '${SCRIPTPATH}/winklerrrVIMRC'"
 
-# SERVER
-alias server="ssh wordpress@sandrowinkler.com"
-
 ################## AUTOLOAD ##################
 
 # COLORS
@@ -95,6 +92,11 @@ autoload -Uz promptinit && promptinit && setopt prompt_subst
 autoload -Uz compinit && compinit
 
 ################## FUNCTIONS ##################
+
+# SERVER
+function server() {
+  ssh "$*"@sandrowinkler.com
+}
 
 # CHANGE DIR
 function cd() {
