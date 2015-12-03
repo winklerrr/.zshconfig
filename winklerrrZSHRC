@@ -27,7 +27,7 @@ unalias -m "*"
 # GENERAL
 alias c=clear
 alias l=ls
-alias ls="ls -lAGp"
+alias ls="ls -lApc"
 
 # SUDO LAST COMMAND
 alias doch='sudo $(fc -ln -1)'
